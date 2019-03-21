@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		CE602C7922419BAC003EBB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C7822419BAC003EBB00 /* AppDelegate.swift */; };
-		CE602C7B22419BAC003EBB00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C7A22419BAC003EBB00 /* ViewController.swift */; };
+		CE602C7B22419BAC003EBB00 /* StartVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C7A22419BAC003EBB00 /* StartVerificationViewController.swift */; };
 		CE602C7E22419BAC003EBB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE602C7C22419BAC003EBB00 /* Main.storyboard */; };
 		CE602C8022419BAD003EBB00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE602C7F22419BAD003EBB00 /* Assets.xcassets */; };
 		CE602C8322419BAD003EBB00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE602C8122419BAD003EBB00 /* LaunchScreen.storyboard */; };
 		CE602C8E22419BAD003EBB00 /* Phone_VerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C8D22419BAD003EBB00 /* Phone_VerificationTests.swift */; };
 		CE602C9922419BAD003EBB00 /* Phone_VerificationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C9822419BAD003EBB00 /* Phone_VerificationUITests.swift */; };
+		CE602CA722419BBE003EBB00 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE602CA622419BBE003EBB00 /* Config.plist */; };
+		CE602CA922419D53003EBB00 /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602CA822419D53003EBB00 /* DataStructures.swift */; };
+		CE602CAB22419FF5003EBB00 /* RequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602CAA22419FF5003EBB00 /* RequestHelper.swift */; };
+		CE602CAD2241A0F3003EBB00 /* VerifyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602CAC2241A0F3003EBB00 /* VerifyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		CE602C7522419BAC003EBB00 /* Phone Verification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone Verification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE602C7822419BAC003EBB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE602C7A22419BAC003EBB00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE602C7A22419BAC003EBB00 /* StartVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVerificationViewController.swift; sourceTree = "<group>"; };
 		CE602C7D22419BAC003EBB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE602C7F22419BAD003EBB00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE602C8222419BAD003EBB00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		CE602C9422419BAD003EBB00 /* Phone VerificationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Phone VerificationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE602C9822419BAD003EBB00 /* Phone_VerificationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phone_VerificationUITests.swift; sourceTree = "<group>"; };
 		CE602C9A22419BAD003EBB00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE602CA622419BBE003EBB00 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		CE602CA822419D53003EBB00 /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
+		CE602CAA22419FF5003EBB00 /* RequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHelper.swift; sourceTree = "<group>"; };
+		CE602CAC2241A0F3003EBB00 /* VerifyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,7 @@
 		CE602C6C22419BAC003EBB00 = {
 			isa = PBXGroup;
 			children = (
+				CE602CA622419BBE003EBB00 /* Config.plist */,
 				CE602C7722419BAC003EBB00 /* Phone Verification */,
 				CE602C8C22419BAD003EBB00 /* Phone VerificationTests */,
 				CE602C9722419BAD003EBB00 /* Phone VerificationUITests */,
@@ -98,7 +107,10 @@
 			isa = PBXGroup;
 			children = (
 				CE602C7822419BAC003EBB00 /* AppDelegate.swift */,
-				CE602C7A22419BAC003EBB00 /* ViewController.swift */,
+				CE602C7A22419BAC003EBB00 /* StartVerificationViewController.swift */,
+				CE602CA822419D53003EBB00 /* DataStructures.swift */,
+				CE602CAA22419FF5003EBB00 /* RequestHelper.swift */,
+				CE602CAC2241A0F3003EBB00 /* VerifyAPI.swift */,
 				CE602C7C22419BAC003EBB00 /* Main.storyboard */,
 				CE602C7F22419BAD003EBB00 /* Assets.xcassets */,
 				CE602C8122419BAD003EBB00 /* LaunchScreen.storyboard */,
@@ -229,6 +241,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE602CA722419BBE003EBB00 /* Config.plist in Resources */,
 				CE602C8322419BAD003EBB00 /* LaunchScreen.storyboard in Resources */,
 				CE602C8022419BAD003EBB00 /* Assets.xcassets in Resources */,
 				CE602C7E22419BAC003EBB00 /* Main.storyboard in Resources */,
@@ -256,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE602C7B22419BAC003EBB00 /* ViewController.swift in Sources */,
+				CE602CA922419D53003EBB00 /* DataStructures.swift in Sources */,
+				CE602C7B22419BAC003EBB00 /* StartVerificationViewController.swift in Sources */,
+				CE602CAD2241A0F3003EBB00 /* VerifyAPI.swift in Sources */,
 				CE602C7922419BAC003EBB00 /* AppDelegate.swift in Sources */,
+				CE602CAB22419FF5003EBB00 /* RequestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
