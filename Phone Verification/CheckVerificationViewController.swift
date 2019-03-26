@@ -9,22 +9,39 @@
 import UIKit
 
 class CheckVerificationViewController: UIViewController {
-
+    @IBOutlet weak var codeField: UITextField!
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    var countryCode: String?
+    var phoneNumber: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func validateCode(_ sender: Any) {
+        self.statusLabel.text = nil
+        self.statusLabel.isHidden = true
+        
+        if let code = codeField.text {
+            VerifyAPI.validateVerificationCode(self.countryCode!, self.phoneNumber!, code) {
+                checked in
+                
+                if(checked.success) {
+                    self.statusLabel.textColor = UIColor.green
+                    self.statusLabel.text = "Verification successful!"
+                    self.statusLabel.isHidden = false
+                } else {
+                    self.statusLabel.textColor = UIColor.red
+                    self.statusLabel.text = checked.message
+                    self.statusLabel.isHidden = false
+                }
+            }
+        }
+        
     }
-    */
+    
 
 }

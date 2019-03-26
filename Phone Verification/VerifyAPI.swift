@@ -22,4 +22,31 @@ struct VerifyAPI {
             return .success(DataResult(data: json))
         }
     }
+    
+    static func validateVerificationCode(_ countryCode: String,
+                                         _ phoneNumber: String,
+                                         _ code: String,
+                                         completionHandler: @escaping (CheckResult) -> Void) {
+        let parameters = [
+            "via": "sms",
+            "country_code": countryCode,
+            "phone_number": phoneNumber,
+            "verification_code": code
+        ]
+        
+        RequestHelper.createRequest("check", parameters) {
+            jsonData in
+            
+            let decoder = JSONDecoder()
+            do {
+                let checked = try decoder.decode(CheckResult.self, from: jsonData)
+                DispatchQueue.main.async {
+                    completionHandler(checked)
+                }
+                return VerifyResult.success(checked)
+            } catch {
+                return VerifyResult.failure(VerifyError.err("failed to deserialize"))
+            }
+        }
+    }
 }

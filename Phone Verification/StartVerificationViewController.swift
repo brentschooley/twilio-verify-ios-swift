@@ -25,5 +25,12 @@ class StartVerificationViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let dest = segue.destination as? CheckVerificationViewController {
+            dest.countryCode = countryCodeField.text
+            dest.phoneNumber = phoneNumberField.text
+        }
+    }
+    
 }
 

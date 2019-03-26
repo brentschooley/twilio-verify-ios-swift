@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>serverUrl</key>
-	<string>&lt;replace with your server URL&gt;</string>
+	<string>&lt;your backend URL goes here&gt;</string>
 </dict>
 </plist>

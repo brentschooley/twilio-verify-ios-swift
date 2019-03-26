@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2311FE224A9D7400905D9F /* CheckVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2311FD224A9D7400905D9F /* CheckVerificationViewController.swift */; };
 		CE602C7922419BAC003EBB00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C7822419BAC003EBB00 /* AppDelegate.swift */; };
 		CE602C7B22419BAC003EBB00 /* StartVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE602C7A22419BAC003EBB00 /* StartVerificationViewController.swift */; };
 		CE602C7E22419BAC003EBB00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE602C7C22419BAC003EBB00 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE2311FD224A9D7400905D9F /* CheckVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckVerificationViewController.swift; sourceTree = "<group>"; };
 		CE602C7522419BAC003EBB00 /* Phone Verification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phone Verification.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE602C7822419BAC003EBB00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE602C7A22419BAC003EBB00 /* StartVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVerificationViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				CE602CAA22419FF5003EBB00 /* RequestHelper.swift */,
 				CE602CAC2241A0F3003EBB00 /* VerifyAPI.swift */,
 				CE602C7C22419BAC003EBB00 /* Main.storyboard */,
+				CE2311FD224A9D7400905D9F /* CheckVerificationViewController.swift */,
 				CE602C7F22419BAD003EBB00 /* Assets.xcassets */,
 				CE602C8122419BAD003EBB00 /* LaunchScreen.storyboard */,
 				CE602C8422419BAD003EBB00 /* Info.plist */,
@@ -273,6 +276,7 @@
 				CE602C7B22419BAC003EBB00 /* StartVerificationViewController.swift in Sources */,
 				CE602CAD2241A0F3003EBB00 /* VerifyAPI.swift in Sources */,
 				CE602C7922419BAC003EBB00 /* AppDelegate.swift in Sources */,
+				CE2311FE224A9D7400905D9F /* CheckVerificationViewController.swift in Sources */,
 				CE602CAB22419FF5003EBB00 /* RequestHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
